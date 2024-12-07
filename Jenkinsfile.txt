@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     try {
-                        bat '"D:\\System_Programming_Task4\\Task4-Daniil-Dyachenko-Test\\Debug\\Task4-Daniil-Dyachenko-Test.exe"'
+                        bat '"D:\\System_Programming_Task4\\Task4-Daniil-Dyachenko-Test\\x64\\Debug\\Task4-Daniil-Dyachenko-Test.exe"'
                     } catch (Exception e) {
                         echo "Test error: ${e.message}"
                         currentBuild.result = 'FAILURE'
