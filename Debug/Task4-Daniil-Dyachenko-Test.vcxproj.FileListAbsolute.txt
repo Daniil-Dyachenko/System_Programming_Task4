@@ -1,0 +1,4 @@
+D:\System_Programming_Task4\Task4-Daniil-Dyachenko-Test\Debug\Task4-Daniil-Dyachenko-Test.vcxproj.CopyComplete
+D:\System_Programming_Task4\Task4-Daniil-Dyachenko-Test\Debug\Task4-Daniil-Dyachenko-Test.exe
+D:\System_Programming_Task4\Task4-Daniil-Dyachenko-Test\Debug\gtest.pdb
+D:\System_Programming_Task4\Task4-Daniil-Dyachenko-Test\Debug\gtest_main.pdb
