@@ -7,30 +7,34 @@
 #include <stdio.h>
 #include "sort.h"
 #define STRING_MAX 512ull
-int32_t get_str(const char* msg, char* str, int32_t limit) {
+int32_t get_str(const char* msg, char* str, int32_t limit)
+{
     printf("%s", msg);
-    char c;
+    int c;
     int32_t size = 0;
-    while (size < limit - 1 && (c = getchar()) != EOF && c != '\n') {
-        str[size++] = c;
+    while (size < limit - 1 && (c = getchar()) != EOF && c != '\n')
+    {
+        str[size++] = (char)c;
     }
     str[size] = '\0';
     return size;
 }
-int32_t strlenn(const char* str) {
-    int32_t cnt = 0;
-    while (*str++) {
-        cnt++;
-    }
-    return cnt;
+size_t strlenn(const char* str)
+{
+    const char* start = str;
+    while (*str)
+        str++;
+    return (size_t)(str - start);
 }
-void strcopy(char* fStr, char* sStr, int32_t until) {
-    while (until-- > 0 && (*sStr++ = *fStr++)) {
+void strcopy(char* fStr, const char* sStr, size_t until)
+{
+    while (until-- > 0 && (*fStr++ = *sStr++) != '\0')
         ;
-    }
 }
-int32_t strcmpp(const char* fStr, const char* sStr) {
-    while (*fStr && *fStr == *sStr) {
+int32_t strcmpp(const char* fStr, const char* sStr)
+{
+    while (*fStr && *fStr == *sStr)
+    {
         fStr++;
         sStr++;
     }
